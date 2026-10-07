@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boids Flocking</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1>Boids</h1>
+
+  <canvas id="canvas" width="900" height="600"></canvas>
+
+  <div class="controls">
+    <button id="playBtn">Pause</button>
+    <button id="resetBtn">Reset</button>
+    <label>
+      Separation
+      <input data-setting="separationWeight" type="range" min="0" max="3" step="0.1" value="1.5">
+    </label>
+    <label>
+      Alignment
+      <input data-setting="alignmentWeight" type="range" min="0" max="3" step="0.1" value="1">
+    </label>
+    <label>
+      Cohesion
+      <input data-setting="cohesionWeight" type="range" min="0" max="3" step="0.1" value="1">
+    </label>
+    <label>
+      Vision
+      <input data-setting="perception" type="range" min="10" max="150" step="1" value="50">
+    </label>
+    <label>
+      Max speed
+      <input data-setting="maxSpeed" type="range" min="1" max="8" step="0.1" value="3">
+    </label>
+    <label>
+      <input id="showVision" type="checkbox">
+      Show vision
+    </label>
+  </div>
+
+  <a href="../index.html">&larr; Back</a>
+
+  <script src="vector.js"></script>
+  <script src="boids.js"></script>
+</body>
+</html>
